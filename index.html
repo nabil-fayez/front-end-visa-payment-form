@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment VISA Form - Nabil Fayez</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <form action class="visa-form">
+            <div class="visa-model">
+                <div class="visa-model-header">
+                    <i class="fa-solid fa-sim-card fa-rotate-90"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+
+                <h1 id="visa-number">2132 **** **** 5325</h1>
+                <div class="visa-model-footer">
+                    <div class="name-data">
+                        <span id="name">Name<br>Nabil Fayez</span>
+                    </div>
+                    <div class="cvc-data">
+                        <span id="cvc-code">CVC<br>522</span>
+                    </div>
+
+                    <div class="exp-data">
+                        <span id="exp">Exp<br>04/25</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input">
+                <span class="label" for="card-number">Card-Number</span>
+                <input autocomplete="off" type="text" name="card-number" placeholder="2132 **** **** 5325" maxlength="16">
+            </div>
+            <div class="input">
+                <span class="label" for="name">Name</span>
+                <input autocomplete="off" type="text" name="name" placeholder="You'r Name">
+            </div>
+            <div class="input exp-data">
+
+                <span class="label" for="cvc-date">CVC Code</span>
+                <input autocomplete="off" type="text" name="cvc" class="input-date" placeholder="000" maxlength="3">
+
+                <span class="label" for="exp-date">Exp-Data</span>
+                <input autocomplete="off" type="text" name="exp" class="input-date" placeholder="MM/YY" maxlength="4">
+            </div>
+            <div class="input">
+                <button type="submit">Pay Now</button>
+            </div>
+        </form>
+    </body>
+</html>
