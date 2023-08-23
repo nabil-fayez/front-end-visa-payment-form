@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #f0f0f5;
+    --black-color: #000522;
+    --shadow-color: #00000089;
+    --main-color: #505fff;
+    --second-color: #8278d9;
+    --hover-color: #3444fa;
+    --linear-gradient: linear-gradient(90deg, var(--main-color), var(--second-color));
+    --gold-color: #ffd700;
+
+    --radius: 8px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--linear-gradient);
+}
+
+
+.visa-form {
+    position: relative;
+    height: 370px;
+    width: 400px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--radius);
+    background: var(--white-color);
+}
+
+.visa-form .visa-model {
+    position: absolute;
+    top: -100px;
+    height: 200px;
+    width: 350px;
+    padding: 10px 30px;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white-color);
+    background: var(--black-color);
+    box-shadow: 0 5px 10px var(--shadow-color);
+    transition: all 0.5s;
+}
+
+.visa-model-header,
+.visa-model-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 0;
+}
+
+.visa-model-header i {
+    font-size: 1.7rem;
+}
+
+.visa-model h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.exp-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.exp-data input {
+    margin: auto;
+}
+
+.input .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input input {
+    padding: 5px;
+    border-radius: var(--radius);
+    border: 1px solid var(--black-color);
+    outline: none;
+    transition: all 0.3s;
+    height: 35px;
+}
+
+.input input:focus {
+    border: none;
+    outline: 1px solid var(--main-color);
+}
+
+.input input.input-date {
+    width: 20%;
+}
+
+.input button {
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.input button:hover {
+    background: var(--hover-color);
+}
+
+#exp,
+#cvc-code,
+#visa-number,
+#name {
+    transition: all 0.3s ease-in-out;
+}
+
+.visa-form:has(input[name='name']:focus) #name {
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 1.2rem;
+}
+
+.visa-form:has(input[name='card-number']:focus) #visa-number {
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 1.7rem;
+}
+
+.visa-form:has(input[name='cvc']:focus) #cvc-code {
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 1.2rem;
+}
+
+.visa-form:has(input[name='exp']:focus) #exp {
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 1.2rem;
+}
+
+.visa-form:has(button:focus) .visa-model,
+.visa-form:has(button:hover) .visa-model {
+    background: var(--hover-color);
+}
